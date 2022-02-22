@@ -1,8 +1,9 @@
-pragma solidity ^0.6.6;
+pragma solidity >=0.6.0 <0.9.0;
 
 import './aave/FlashLoanReceiverBase.sol';
 import './aave/ILendingPoolAddressesProvider.sol';
 import './aave/ILendingPool.sol';
+import '@openzeppelin/contracts/utils/math/SafeMath.sol';
 
 contract Flashloan is FlashLoanReceiverBase {
     constructor(address _addressProvider)
@@ -29,7 +30,7 @@ contract Flashloan is FlashLoanReceiverBase {
         // !! Ensure that *this contract* has enough of `_reserve` funds to payback the `_fee` !!
         //
 
-        uint256 totalDebt = _amount.add(_fee);
+        uint256 totalDebt = add(_amount, _fee);
         transferFundsBackToPoolInternal(_reserve, totalDebt);
     }
 
