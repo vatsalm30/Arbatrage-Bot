@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: MIT
 pragma solidity >=0.6.0 <0.9.0;
 
 import './aave/FlashLoanReceiverBase.sol';
@@ -7,9 +8,12 @@ import '@openzeppelin/contracts/utils/math/SafeMath.sol';
 
 contract Flashloan is FlashLoanReceiverBase {
     constructor(address _addressProvider)
-        public
         FlashLoanReceiverBase(_addressProvider)
     {}
+
+    function add(uint256 a, uint256 b) public pure returns (uint256) {
+        return a + b;
+    }
 
     /**
         This function is called after your contract has received the flash loaned amount
@@ -32,6 +36,7 @@ contract Flashloan is FlashLoanReceiverBase {
 
         uint256 totalDebt = add(_amount, _fee);
         transferFundsBackToPoolInternal(_reserve, totalDebt);
+        _params;
     }
 
     /**
