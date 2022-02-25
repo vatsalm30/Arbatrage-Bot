@@ -1,10 +1,5 @@
 # Arbratrage Bot
 
-[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/ravidsrk/smart-contract-starter/blob/master/LICENSE)
-[![Build Status](https://travis-ci.org/ravidsrk/smart-contract-starter.svg?branch=master)](https://travis-ci.org/ravidsrk/smart-contract-starter) 
-[![Coverage Status](https://coveralls.io/repos/github/ravidsrk/smart-contract-starter/badge.svg?branch=master)](https://coveralls.io/github/ravidsrk/smart-contract-starter?branch=master) 
-[![CircleCI](https://circleci.com/gh/ravidsrk/smart-contract-starter.svg?style=svg)](https://circleci.com/gh/ravidsrk/smart-contract-starter)
-
 ## This project uses:
 - [Truffle v5](https://truffleframework.com/)
 - [Ganache](https://truffleframework.com/ganache)
